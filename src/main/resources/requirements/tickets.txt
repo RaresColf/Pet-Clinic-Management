@@ -1,14 +1,14 @@
-PCM 11: Create system architecture diagram.
+done PCM 13: Create system architecture diagram.
 
-PCM 12: Create database diagram.
+done PCM 14: Create database diagram.
 
-PCM 13: Add Hibernate configuration(pom and utils).
+done PCM 15: Add Hibernate configuration(pom and utils).
 
-PCM 14: Add Hibernate model.
+done PCM 16: Add Hibernate model.
 
-PCM 15: Add generic repositories.
+PCM 17: Add generic repositories.
 
-PCM 16: Create user menu.
+PCM 18: Create user menu.
 
 
 
@@ -29,24 +29,32 @@ PCM 4:  As a user I should be able to delete an existing Vet by providing the id
 PCM 5: As a user I should be able to add a new Pet in the system by providing race, birthdate, if is vaccinated or not and the owner's name
       - The system should validate the race and the birthdate.
       - The system should generate a new unique identification number
-      - In case that owner doesn't exist, the system should return an error message
+      - In case of veterinarian id doesn't exist in the system (or referring to a previous one from another clinic),
+      the system will show an error message and ask for the current veterinarian for the pet to be declared.
 
 PCM 6: As a user I should be able to view all the Pets. Existing Pets should be listed on the screen.
-      - Each line should show the Pet id, race, if is vaccinated or not and the owner name.
+      - Each line should show the Pet id, race, if is vaccinated or not, owner name and the assigned vet full name.
 
-PCM 7: As a user I should be able to update a Pet by providing the id and the new values for owner and to know if is Vaccinated or not
+PCM 7: As a user I should be able to update a Pet by providing the id and the new values for owner,
+        to know if is Vaccinated or not and new assigned veterinarian full name
 
 PCM 8: As a user I should be able to delete an existing Pet by providing the id of the Pet that I want to delete
 
-PCM 9: As a user I should be able to add a new consult by providing an Vet, Pet, date and description
-      - The system should validate if date, description to not be empty or blank
-      - In case that owner or pet doesn't exist, the system should return an error message.
+PCM 9:As a user, I should be able to schedule a new consult for existing pet by providing the pet id, assigned
+      veterinarian id, date for the consult and a brief description for the reasons the ownerName scheduled a
+      consult.
+      The system should validate the description also to not be empty or blank.
+      In case of pet id doesn't exist in the system, the system will show an error message, and asks for a new pet
+      entry to be created.
 
 PCM 10: As a user I should be able to view all the consults. All the consults should be displayed on the screen
       - Each line should show the Vet full name, Pet name, date and the description.
 
+PCM 11: As a user, I should be able to update the description of a consult by providing new information in the
+        description field.
+        The system should validate the pet description to not be empty or blank.
 
-
+PCM 12: As a user, I should be able to import CSV files with existing data for veterinarians, pets and consults.
 
 
 
